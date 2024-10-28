@@ -31,17 +31,7 @@ class Server:
 
         start_index, end_index = self.index_range(page, page_size)
 
-        with open('Popular_Baby_Names.csv', 'r') as file:
-            reader = csv.reader(file)
-            dataset = list(reader)
-
-        result = (
-                dataset[start_index:end_index]
-                if start_index < len(dataset)
-                else []
-                )
-        return result
-
+        return self.dataset()[start_index:end_index]
 
 def index_range(page, page_size):
     """Calculate the start and end indices for a given page."""
