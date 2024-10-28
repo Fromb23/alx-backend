@@ -29,7 +29,7 @@ class Server:
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page > 0
 
-        start_index, end_index = index_range(page, page_size)
+        start_index, end_index = self.index_range(page, page_size)
 
         with open('Popular_Baby_Names.csv', 'r') as file:
             reader = csv.reader(file)
