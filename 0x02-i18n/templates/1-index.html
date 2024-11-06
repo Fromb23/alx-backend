@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Language Information</title>
+	</head>
+	<body>
+		<h1>Available Languages</h1>
+		<ul>
+			{% for lang in languages %}
+			<li>{{ lang }}</li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>
